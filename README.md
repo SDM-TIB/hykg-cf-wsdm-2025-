@@ -5,8 +5,8 @@ code and data for WSDM 2025 short paper
 1. The unit database is stored in `data/KG.csv`. The corresponding code for retrieving the data is in `data/query_data_WSDM.ipynb`.
 2. The horn rules (for generating counterfactuals) are generated using `data/data_processing.ipynb` section: "# Rule Mining using Expert Causal Graph".
 3. The causal discovery experiments and the corresponding results are presented in `causal/causal_discovery.ipynb`.
-4. The counterfactual prediction experiments are done using `causal/counterf_prediction_command.py' with commands: ```
-python counterf_prediction_command.py -rule cg -pca 0.9
+4. The counterfactual prediction experiments are done using `causal/counterf_prediction_command.py` with commands: 
+```python counterf_prediction_command.py -rule cg -pca 0.9
 python counterf_prediction_command.py -rule cg -pca 0.5
 python counterf_prediction_command.py -rule cg -pca 0.1
 ```
