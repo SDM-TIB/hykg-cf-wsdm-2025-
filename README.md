@@ -15,11 +15,11 @@ python counterf_prediction_command.py -rule cg -pca 0.1
 # LLM prompts for **Baseline2** and **Baseline3**:
 
 ### LLM prompt for **Baseline2**
-```
-# ROLE #
+
+\# ROLE \#
 Act as an expert on identifying causal relationships between properties within a knowledge graph.
 
-# CONTEXT #
+\# CONTEXT \#
 You are examining the causal relationships among properties within the knowledge graph.
 
 1. Property: age;
@@ -34,23 +34,23 @@ You are examining the causal relationships among properties within the knowledge
 10. Property: stage;
 
 
-# OBJECTIVES #
+\# OBJECTIVES \#
 1. Analyze all these properties in the # CONTEXT # to identify all possible causal relationships among them.
 2. Each identified causal relationship should be supported by evidence from academic studies, referenced using title, DOI or PMCID to ensure confidentiality and verify the reliability of the studies.
 
-# INSTRUCTIONS #
+\# INSTRUCTIONS \#
 1. Examine and understand each property carefully.
 2. Identify all possible causal relationships among the properties in the # CONTEXT #; each identified causal relationship must be supported by the title, DOI or PMCID of relevant academic research.
 3. Provide, in a code box, the identified causal relationships in the previous step as a Python set of tuples, each with format: ([A], [B]) representing a causal relationship from property [A] to property [B]. 
 4. Do not introduce directed loops along the causal relationships.
-```
+
 
 ### LLM prompt for **Baseline3**
-```
-# ROLE #
+
+\# ROLE \#
 Act as an expert in lung cancer research, focusing on identifying causal relationships between properties within a knowledge graph of non-small cell lung cancer (NSCLC) patients.
 
-# CONTEXT #
+\# CONTEXT \#
 You are examining the causal relationships among properties of `NLCPatient` class, within a knowledge graph, 
 with rich metadata that describe their human-understandable label (`rdfs:label`), human-understandable meaning (`rdfs:comment`), domain (`rdfs:domain`), and range (`rdfs:range`):
 
@@ -109,16 +109,16 @@ Here are some associations between properties recognized in the knowledge graph:
 `associations = [('hasBio', 'hasFamilyCancerType'), ('locatedIn', 'relapse'), ('hasFamilyCancerType', 'hasSmokingHabit'), ('hasBio', 'locatedIn'), ('locatedIn', 'hasSmokingHabit'), ('hasBio', 'stage'), ('sex', 'relapse'), ('relapse', 'stage'), ('sex', 'hasSmokingHabit'), ('age', 'relapse'), ('age', 'hasSmokingHabit'), ('hasBio', 'familyGender'), ('familyGender', 'relapse'), ('hasBio', 'relapse'), ('hasBio', 'hasSmokingHabit'), ('age', 'hasBio'), ('familyGender', 'hasSmokingHabit'), ('hasBio', 'episodeType'), ('hasBio', 'sex'), ('relapse', 'hasSmokingHabit'), ('hasSmokingHabit', 'stage'), ('episodeType', 'relapse'), ('episodeType', 'hasSmokingHabit'), ('hasFamilyCancerType', 'relapse')]`,
 where each tuple denote the association between two properties of `NLCPatient` class.
 
-# OBJECTIVES #
+\# OBJECTIVES \#
 1. Analyze all these properties in the # CONTEXT # to identify all possible causal relationships among them.
 2. Each identified causal relationship should be supported by evidence from academic studies, referenced using title, DOI or PMCID to ensure confidentiality and verify the reliability of the studies.
 
-# INSTRUCTIONS #
+\# INSTRUCTIONS \#
 1. Examine and understand the metadata of each property carefully. 
 2. For each tuple ([A], [B]) in the `association` list, if there exists causation between properties [A] and [B]? if exists, what is the causal direction.
 3. Identify all possible causal relationships within the `association` list where the properties is described in the # CONTEXT #; each identified causal relationship must be supported by the title, DOI or PMCID of relevant academic research.
 4. Provide, in a code box, the identified causal relationships in the previous step as a Python set of tuples, each with format: ([A], [B]) representing a causal relationship from property [A] to property [B].
 5. Do not introduce directed loops along the causal relationships.	
-```
+
  
 
