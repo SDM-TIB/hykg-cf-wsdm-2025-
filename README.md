@@ -46,7 +46,7 @@ You are examining the causal relationships among properties within the knowledge
 4. Do not introduce directed loops along the causal relationships.
 
 
-### LLM prompt for **Baseline3**
+### LLM prompt for **Baseline3** and **HyKG-CF**
 
 \# ROLE \#
 Act as an expert in lung cancer research, focusing on identifying causal relationships between properties within a knowledge graph of non-small cell lung cancer (NSCLC) patients.
