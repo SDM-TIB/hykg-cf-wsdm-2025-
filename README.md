@@ -1,5 +1,6 @@
 # HyKG-CF (wsdm 2025)
-code and data for WSDM 2025 short paper
+code and data for WSDM 2025 short paper.
+All code and data are available from https://figshare.com/s/c15551e0f42955329fb1?file=50156028. 
 
 # Instructions of reproducing the experimental results
 1. The unit database is stored in `data/KG.csv`. The corresponding code for retrieving the data is in `data/query_data_WSDM.ipynb`.
