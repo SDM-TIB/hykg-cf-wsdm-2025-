@@ -1,4 +1,4 @@
-# HyKG-CF (wsdm 2025)
+# HyKG-CF: A Hybrid Approach for Counterfactual Prediction using Domain Knowledge (WSDM 2025)
 code and data for WSDM 2025 short paper.
 All code and data are available from https://figshare.com/s/c15551e0f42955329fb1?file=50156028. 
 
